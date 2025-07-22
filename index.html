@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro das Irmãs 2026 - Inscrições Abertas</title>
+    <meta name="description" content="Um tempo especial de comunhão e renovação espiritual. Faça sua inscrição para o Retiro das Irmãs 2026.">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            color: white;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+        }
+
+        .btn-primary:hover, .btn-primary:active {
+            background: linear-gradient(135deg, #db2777, #7c3aed);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #ec4899;
+            border: 2px solid #ec4899;
+        }
+
+        .btn-outline:hover, .btn-outline:active {
+            background: #ec4899;
+            color: white;
+        }
+
+        .btn-lg {
+            padding: 18px 36px;
+            font-size: 18px;
+            border-radius: 16px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: rgba(236, 72, 153, 0.1);
+            color: #ec4899;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        /* Header/Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 16px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .logo i {
+            color: #ec4899;
+            font-size: 24px;
+        }
+
+        /* Desktop Navigation */
+        .nav-links {
+            display: none;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 8px 0;
+        }
+
+        .nav-links a:hover {
+            color: #ec4899;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #333;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn span:not(:last-child) {
+            margin-bottom: 5px;
+        }
+
+        /* Menu aberto - animação do hamburger */
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: white;
+            z-index: 1000;
+            padding: 80px 0 40px;
+            transition: all 0.3s ease;
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mobile-menu-links li {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .mobile-menu-links a {
+            display: block;
+            padding: 20px 30px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-links a:hover, .mobile-menu-links a:active {
+            background: #fdf2f8;
+            color: #ec4899;
+            padding-left: 40px;
+        }
+
+        .mobile-menu-links i {
+            margin-right: 15px;
+            width: 20px;
+            color: #ec4899;
+        }
+
+        /* Hero Section - Mobile First */
+        .hero {
+            background: linear-gradient(135deg, #fdf2f8, #f3e8ff, #eff6ff);
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.1));
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero .gradient-text {
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .hero-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 12px 20px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-weight: 500;
+            width: fit-content;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .hero-actions .btn {
+            width: 100%;
+            max-width: 280px;
+        }
+
+        /* Sections - Mobile First */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #333;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* About Section - Mobile First */
+        .about {
+            background: white;
+        }
+
+        .features-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .feature-card {
+            padding: 32px 24px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+
+        .feature-icon.pink {
+            background: rgba(236, 72, 153, 0.1);
+            color: #ec4899;
+        }
+
+        .feature-icon.purple {
+            background: rgba(139, 92, 246, 0.1);
+            color: #8b5cf6;
+        }
+
+        .feature-icon.blue {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .highlight-section {
+            background: linear-gradient(135deg, #fdf2f8, #f3e8ff);
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+        }
+
+        .highlight-content h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .highlight-content p {
+            color: #666;
+            margin-bottom: 24px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        .benefits-list i {
+            color: #10b981;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .price-card {
+            background: white;
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 24px;
+        }
+
+        .price {
+            font-size: 42px;
+            font-weight: 800;
+            color: #ec4899;
+            margin-bottom: 8px;
+        }
+
+        .price-label {
+            color: #666;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .price-description {
+            font-size: 14px;
+            color: #999;
+        }
+
+        /* Schedule Section - Mobile First */
+        .schedule {
+            background: #f9fafb;
+        }
+
+        .schedule-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .schedule-item {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .schedule-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin: 0 auto 16px;
+        }
+
+        .schedule-header {
+            margin-bottom: 16px;
+        }
+
+        .schedule-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .schedule-time {
+            background: rgba(236, 72, 153, 0.1);
+            color: #ec4899;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .schedule-description {
+            color: #666;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* Registration Section - Mobile First */
+        .registration {
+            background: white;
+        }
+
+        .form-container {
+            max-width: 100%;
+        }
+
+        .demo-notice {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .demo-notice p {
+            color: #92400e;
+            font-weight: 500;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .form-card {
+            padding: 24px;
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 24px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 15px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #ec4899;
+            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+            font-family: inherit;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-top: 4px;
+            transform: scale(1.2);
+        }
+
+        .checkbox-group label {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .payment-info {
+            background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .payment-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 20px;
+        }
+
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .payment-method {
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .payment-method i {
+            font-size: 24px;
+        }
+
+        .payment-method .pix {
+            color: #10b981;
+        }
+
+        .payment-method .card {
+            color: #3b82f6;
+        }
+
+        .payment-method-info h4 {
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+
+        .payment-method-info p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+
+        .security-note {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .security-note i {
+            color: #10b981;
+        }
+
+        /* Contact Section - Mobile First */
+        .contact {
+            background: #f9fafb;
+        }
+
+        .contact-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contact-card {
+            padding: 24px;
+        }
+
+        .contact-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #333;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .contact-info h4 {
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+
+        .contact-info p {
+            color: #666;
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h4 {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .faq-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Footer - Mobile First */
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo i {
+            color: #ec4899;
+            font-size: 28px;
+        }
+
+        .footer-logo span {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .footer p {
+            color: #9ca3af;
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+
+        .footer-divider {
+            border-top: 1px solid #374151;
+            padding-top: 20px;
+        }
+
+        .footer-divider p {
+            color: #6b7280;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Tablet Styles */
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
+
+            .hero h1 {
+                font-size: 4rem;
+            }
+
+            .hero-badges {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-actions {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .hero-actions .btn {
+                width: auto;
+            }
+
+            .features-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .schedule-item {
+                display: flex;
+                gap: 24px;
+                text-align: left;
+                align-items: flex-start;
+            }
+
+            .schedule-icon {
+                margin: 0;
+                flex-shrink: 0;
+            }
+
+            .schedule-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .contact-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+
+            .payment-methods {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+        }
+
+        /* Desktop Styles */
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 32px;
+            }
+
+            .nav-links {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 5rem;
+            }
+
+            .hero p {
+                font-size: 20px;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .section-title h2 {
+                font-size: 3rem;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 32px;
+            }
+
+            .highlight-section {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                gap: 48px;
+                align-items: center;
+                text-align: left;
+                padding: 48px;
+            }
+
+            .price-card {
+                margin-top: 0;
+                min-width: 250px;
+            }
+
+            .form-container {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .form-card {
+                padding: 40px;
+            }
+        }
+
+        /* Touch improvements */
+        @media (hover: none) and (pointer: coarse) {
+            .btn {
+                min-height: 48px;
+            }
+
+            .form-input {
+                min-height: 48px;
+            }
+
+            .mobile-menu-links a {
+                min-height: 60px;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Loading states */
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        /* Focus states for accessibility */
+        .btn:focus,
+        .form-input:focus,
+        .mobile-menu-btn:focus {
+            outline: 2px solid #ec4899;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fas fa-heart"></i>
+                <span>Retiro das Irmãs 2026</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <ul class="nav-links">
+                <li><a href="#evento">Sobre o Evento</a></li>
+                <li><a href="#programacao">Programação</a></li>
+                <li><a href="#inscricao">Inscrição</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-menu-links">
+            <li><a href="#evento" onclick="closeMobileMenu()"><i class="fas fa-heart"></i>Sobre o Evento</a></li>
+            <li><a href="#programacao" onclick="closeMobileMenu()"><i class="fas fa-calendar"></i>Programação</a></li>
+            <li><a href="#inscricao" onclick="closeMobileMenu()"><i class="fas fa-edit"></i>Inscrição</a></li>
+            <li><a href="#contato" onclick="closeMobileMenu()"><i class="fas fa-phone"></i>Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="badge">
+                <i class="fas fa-star"></i>
+                Evento Especial 2026
+            </div>
+            
+            <h1>
+                Retiro das<br>
+                <span class="gradient-text">Irmãs</span><br>
+                2026
+            </h1>
+            
+            <p>
+                Um tempo especial de comunhão, renovação espiritual e fortalecimento da fé. 
+                Venha viver momentos únicos de adoração e crescimento.
+            </p>
+            
+            <div class="hero-badges">
+                <div class="hero-badge">
+                    <i class="fas fa-calendar" style="color: #ec4899;"></i>
+                    <span>Novembro 2026</span>
+                </div>
+                <div class="hero-badge">
+                    <i class="fas fa-map-marker-alt" style="color: #8b5cf6;"></i>
+                    <span>Local a definir</span>
+                </div>
+                <div class="hero-badge">
+                    <i class="fas fa-users" style="color: #3b82f6;"></i>
+                    <span>Vagas limitadas</span>
+                </div>
+            </div>
+            
+            <div class="hero-actions">
+                <a href="#inscricao" class="btn btn-primary btn-lg">
+                    Fazer Inscrição
+                    <i class="fas fa-heart" style="margin-left: 8px;"></i>
+                </a>
+                <a href="#evento" class="btn btn-outline btn-lg">
+                    Saiba Mais
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="evento" class="section about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre o Retiro</h2>
+                <p>Um encontro especial preparado com muito carinho para as irmãs da igreja</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="card feature-card">
+                    <div class="feature-icon pink">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Comunhão</h3>
+                    <p>Momentos especiais de comunhão entre irmãs, fortalecendo laços de amizade e fé</p>
+                </div>
+                
+                <div class="card feature-card">
+                    <div class="feature-icon purple">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Crescimento</h3>
+                    <p>Palestras e estudos bíblicos para fortalecer a fé e promover crescimento espiritual</p>
+                </div>
+                
+                <div class="card feature-card">
+                    <div class="feature-icon blue">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Renovação</h3>
+                    <p>Um tempo de renovação espiritual, descanso e reconexão com Deus</p>
+                </div>
+            </div>
+            
+            <div class="highlight-section">
+                <div class="highlight-content">
+                    <h3>Uma experiência transformadora</h3>
+                    <p>
+                        O Retiro das Irmãs 2026 foi pensado especialmente para proporcionar momentos únicos 
+                        de adoração, reflexão e crescimento espiritual. Será um fim de semana inesquecível!
+                    </p>
+                    <ul class="benefits-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Palestras inspiradoras</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Momentos de adoração</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Atividades de integração</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Alimentação inclusa</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="price-card">
+                    <div class="price">R$ 100</div>
+                    <div class="price-label">Valor da inscrição</div>
+                    <div class="price-description">Inclui hospedagem, alimentação e materiais</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="programacao" class="section schedule">
+        <div class="container">
+            <div class="section-title">
+                <h2>Programação</h2>
+                <p>Uma programação especial preparada com muito carinho</p>
+            </div>
+            
+            <div class="schedule-list">
+                <div class="schedule-item card">
+                    <div class="schedule-icon pink">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="schedule-content">
+                        <div class="schedule-header">
+                            <h3 class="schedule-title">Sexta-feira - Chegada</h3>
+                            <div class="schedule-time">19:00</div>
+                        </div>
+                        <p class="schedule-description">
+                            Recepção, jantar e momento de boas-vindas. Apresentação da programação e integração.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="schedule-item card">
+                    <div class="schedule-icon purple">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="schedule-content">
+                        <div class="schedule-header">
+                            <h3 class="schedule-title">Sábado - Dia Principal</h3>
+                            <div class="schedule-time">08:00 - 22:00</div>
+                        </div>
+                        <p class="schedule-description">
+                            Café da manhã, palestras, momentos de adoração, almoço, atividades em grupo, 
+                            jantar e encerramento com louvor.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="schedule-item card">
+                    <div class="schedule-icon blue">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="schedule-content">
+                        <div class="schedule-header">
+                            <h3 class="schedule-title">Domingo - Encerramento</h3>
+                            <div class="schedule-time">08:00 - 12:00</div>
+                        </div>
+                        <p class="schedule-description">
+                            Café da manhã, culto de encerramento, momento de oração e despedida.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="inscricao" class="section registration">
+        <div class="container">
+            <div class="section-title">
+                <h2>Faça sua Inscrição</h2>
+                <p>Preencha o formulário abaixo para garantir sua vaga</p>
+            </div>
+            
+            <div class="form-container">
+                <div class="card form-card">
+                    <h3 class="form-title">Formulário de Inscrição</h3>
+                    
+                    <div class="demo-notice">
+                        <p>⚠️ <strong>Esta é apenas uma demonstração!</strong> O formulário não está funcional ainda.</p>
+                    </div>
+                    
+                    <form id="inscricaoForm">
+                        <div class="form-group">
+                            <label class="form-label" for="nome">Nome Completo *</label>
+                            <input type="text" id="nome" name="nome" class="form-input" placeholder="Seu nome completo" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="cpf">CPF *</label>
+                            <input type="text" id="cpf" name="cpf" class="form-input" placeholder="000.000.000-00" maxlength="14" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="telefone">Telefone (WhatsApp) *</label>
+                            <input type="text" id="telefone" name="telefone" class="form-input" placeholder="(00) 00000-0000" maxlength="15" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="igreja">Igreja/Local de Congregação</label>
+                            <input type="text" id="igreja" name="igreja" class="form-input" placeholder="Nome da sua igreja (opcional)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="restricoes">Restrições Alimentares</label>
+                            <textarea id="restricoes" name="restricoes" class="form-input form-textarea" placeholder="Descreva suas restrições alimentares, alergias ou necessidades especiais (opcional)"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="responsavel">Responsável Espiritual</label>
+                            <input type="text" id="responsavel" name="responsavel" class="form-input" placeholder="Nome do pastor, líder ou responsável (opcional)">
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="termos" name="termos" required>
+                            <label for="termos">
+                                Aceito os termos da inscrição e confirmo que as informações são verdadeiras *
+                            </label>
+                        </div>
+                        
+                        <div class="payment-info">
+                            <div class="payment-title">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Formas de Pagamento</span>
+                            </div>
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <i class="fas fa-mobile-alt pix"></i>
+                                    <div class="payment-method-info">
+                                        <h4>PIX</h4>
+                                        <p>Pagamento à vista</p>
+                                    </div>
+                                </div>
+                                <div class="payment-method">
+                                    <i class="fas fa-credit-card card"></i>
+                                    <div class="payment-method-info">
+                                        <h4>Cartão de Crédito</h4>
+                                        <p>Até 4x sem juros</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="security-note">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Pagamento seguro via Mercado Pago</span>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                            Prosseguir para Pagamento
+                            <i class="fas fa-heart" style="margin-left: 8px;"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="section contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contato</h2>
+                <p>Tem dúvidas? Entre em contato conosco</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="card contact-card">
+                    <h3>Informações de Contato</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon pink">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Telefone/WhatsApp</h4>
+                            <p>(00) 00000-0000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon purple">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>E-mail</h4>
+                            <p>contato@retiroirmas2026.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon blue">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Endereço</h4>
+                            <p>Local será divulgado em breve</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card contact-card">
+                    <h3>Dúvidas Frequentes</h3>
+                    <div class="faq-item">
+                        <h4>Posso cancelar minha inscrição?</h4>
+                        <p>Sim, cancelamentos podem ser feitos até 30 dias antes do evento.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>O que está incluso no valor?</h4>
+                        <p>Hospedagem, todas as refeições, materiais e atividades do retiro.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Preciso levar alguma coisa?</h4>
+                        <p>Lista completa será enviada por e-mail após a confirmação da inscrição.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <i class="fas fa-heart"></i>
+                <span>Retiro das Irmãs 2026</span>
+            </div>
+            <p>Um tempo especial de comunhão e renovação espiritual</p>
+            <div class="footer-divider">
+                <p>© 2024 Retiro das Irmãs 2026. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Functions
+        function toggleMobileMenu() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            
+            menuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (mobileMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        function closeMobileMenu() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            
+            menuBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+
+        // Formatação de CPF
+        document.getElementById('cpf').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})(\d{1,2})/, '$1-$2');
+            value = value.replace(/(-\d{2})\d+?$/, '$1');
+            e.target.value = value;
+        });
+
+        // Formatação de telefone
+        document.getElementById('telefone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            value = value.replace(/(\d{2})(\d)/, '($1) $2');
+            value = value.replace(/(\d{5})(\d)/, '$1-$2');
+            value = value.replace(/(-\d{4})\d+?$/, '$1');
+            e.target.value = value;
+        });
+
+        // Submissão do formulário
+        document.getElementById('inscricaoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simular loading
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i>Processando...';
+            
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                
+                alert('Esta é apenas uma demonstração! 📱\n\nO formulário não está funcional ainda, mas você pode ver como ficará a experiência mobile completa!\n\nEm breve você poderá fazer sua inscrição real com pagamento integrado! 🙏');
+            }, 2000);
+        });
+
+        // Navegação suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // Close mobile menu if open
+                    closeMobileMenu();
+                    
+                    // Smooth scroll to target
+                    setTimeout(() => {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 300);
+                }
+            });
+        });
+
+        // Animações ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -30px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Aplicar animações aos elementos
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.card, .schedule-item, .hero-badge');
+            animatedElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(element);
+            });
+
+            // Animate hero elements
+            const heroElements = document.querySelectorAll('.hero h1, .hero p, .hero-actions');
+            heroElements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+
+        // Touch feedback for buttons
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            
+            btn.addEventListener('touchend', function() {
+                this.style.transform = '';
+            });
+        });
+
+        // Improve form experience on mobile
+        const formInputs = document.querySelectorAll('.form-input');
+        formInputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+                this.parentElement.style.transition = 'transform 0.2s ease';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = '';
+            });
+        });
+
+        // Add haptic feedback simulation for mobile
+        function vibrate() {
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
+            }
+        }
+
+        // Add vibration to button clicks on mobile
+        document.querySelectorAll('.btn, .mobile-menu-btn').forEach(btn => {
+            btn.addEventListener('click', vibrate);
+        });
+    </script>
+</body>
+</html>
