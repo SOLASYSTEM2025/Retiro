@@ -714,6 +714,123 @@
             color: #10b981;
         }
 
+        /* WhatsApp Button Styles */
+        .whatsapp-contact {
+            margin-bottom: 24px;
+        }
+
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            padding: 20px;
+            border-radius: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            background: linear-gradient(135deg, #128C7E, #25D366);
+        }
+
+        .whatsapp-btn:active {
+            transform: translateY(0);
+        }
+
+        .whatsapp-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .whatsapp-info {
+            flex: 1;
+        }
+
+        .whatsapp-info h4 {
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 16px;
+            color: white;
+        }
+
+        .whatsapp-info p {
+            margin: 0;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .whatsapp-arrow {
+            font-size: 18px;
+            opacity: 0.8;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-btn:hover .whatsapp-arrow {
+            transform: translateX(5px);
+        }
+
+        /* Pulse animation for WhatsApp button */
+        @keyframes whatsapp-pulse {
+            0% {
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            }
+            100% {
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            }
+        }
+
+        .whatsapp-btn {
+            animation: whatsapp-pulse 2s infinite;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .whatsapp-btn {
+                padding: 16px;
+                gap: 12px;
+            }
+            
+            .whatsapp-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+            
+            .whatsapp-info h4 {
+                font-size: 15px;
+            }
+            
+            .whatsapp-info p {
+                font-size: 13px;
+            }
+        }
+
+        /* Touch feedback for mobile */
+        @media (hover: none) and (pointer: coarse) {
+            .whatsapp-btn:active {
+                transform: scale(0.98);
+                background: linear-gradient(135deg, #128C7E, #25D366);
+            }
+        }
+
         /* Contact Section - Mobile First */
         .contact {
             background: #f9fafb;
@@ -1347,15 +1464,24 @@
             <div class="contact-grid">
                 <div class="card contact-card">
                     <h3>Informações de Contato</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon pink">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-info">
-                            <h4>Telefone/WhatsApp</h4>
-                            <p>(00) 00000-0000</p>
-                        </div>
+                    
+                    <div class="contact-item whatsapp-contact">
+                        <a href="https://wa.me/5516997486142?text=Olá!%20Tenho%20interesse%20no%20Retiro%20das%20Irmãs%202026%20e%20gostaria%20de%20mais%20informações." 
+                           target="_blank" 
+                           class="whatsapp-btn">
+                            <div class="whatsapp-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="whatsapp-info">
+                                <h4>Fale conosco no WhatsApp</h4>
+                                <p>Clique aqui para conversar</p>
+                            </div>
+                            <div class="whatsapp-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
                     </div>
+                    
                     <div class="contact-item">
                         <div class="contact-icon purple">
                             <i class="fas fa-envelope"></i>
