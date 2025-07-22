@@ -996,6 +996,32 @@
             outline: 2px solid #ec4899;
             outline-offset: 2px;
         }
+
+        .bloco-img {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+}
+
+.bloco-img .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.bloco-img h3,
+.bloco-img p {
+  position: relative;
+  z-index: 2;
+}
     </style>
 </head>
 <body>
@@ -1092,30 +1118,24 @@
             </div>
             
             <div class="features-grid">
-                <div class="card feature-card">
-                    <div class="feature-icon pink">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Comunhão</h3>
-                    <p>Momentos especiais de comunhão entre irmãs, fortalecendo laços de amizade e fé</p>
-                </div>
-                
-                <div class="card feature-card">
-                    <div class="feature-icon purple">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>Crescimento</h3>
-                    <p>Palestras e estudos bíblicos para fortalecer a fé e promover crescimento espiritual</p>
-                </div>
-                
-                <div class="card feature-card">
-                    <div class="feature-icon blue">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>Renovação</h3>
-                    <p>Um tempo de renovação espiritual, descanso e reconexão com Deus</p>
-                </div>
-            </div>
+  <div class="card feature-card bloco-img" style="background-image: url('images/comunhao.jpg');">
+    <div class="overlay"></div>
+    <h3>Comunhão</h3>
+    <p>Momentos especiais de comunhão entre irmãs, fortalecendo laços de amizade e fé</p>
+  </div>
+  
+  <div class="card feature-card bloco-img" style="background-image: url('images/crescimento.jpg');">
+    <div class="overlay"></div>
+    <h3>Crescimento</h3>
+    <p>Palestras e estudos bíblicos para fortalecer a fé e promover crescimento espiritual</p>
+  </div>
+  
+  <div class="card feature-card bloco-img" style="background-image: url('images/renovacao.jpg');">
+    <div class="overlay"></div>
+    <h3>Renovação</h3>
+    <p>Um tempo de renovação espiritual, descanso e reconexão com Deus</p>
+  </div>
+</div>
             
             <div class="highlight-section">
                 <div class="highlight-content">
