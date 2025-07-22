@@ -283,6 +283,7 @@
             align-items: center;
         }
 
+        /* Adicionando a imagem de fundo com transparência */
         .hero::before {
             content: '';
             position: absolute;
@@ -290,7 +291,11 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.1));
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.3), rgba(139, 92, 246, 0.3)), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/imageminicio-K34JgU3xlKSbGgBcrHxKGCXXDs6G8A.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4; /* Ajuste a transparência aqui */
+            z-index: 1;
         }
 
         .hero .container {
@@ -997,37 +1002,36 @@
             outline-offset: 2px;
         }
 
-        .bloco-img h3,
-.bloco-img p {
-  position: relative;
-  z-index: 2;
-  color: white !important;
-}
+        .bloco-img h3,.bloco-img p {
+            position: relative;
+            z-index: 2;
+            color: white !important;
+        }
+
         .bloco-img {
-  background-size: cover;
-  background-position: center;
-  color: white;
-  position: relative;
-  overflow: hidden;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 24px;
-}
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 24px;
+        }
 
-.bloco-img .overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.45);
-  z-index: 1;
-}
+        .bloco-img .overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
 
-.bloco-img h3,
-.bloco-img p {
-  position: relative;
-  z-index: 2;
-}
+        .bloco-img h3,.bloco-img p {
+            position: relative;
+            z-index: 2;
+        }
     </style>
 </head>
 <body>
@@ -1124,24 +1128,24 @@
             </div>
             
             <div class="features-grid">
-  <div class="card feature-card bloco-img" style="background-image: url('comunhao.jpeg');">
-    <div class="overlay"></div>
-    <h3>Comunhão</h3>
-    <p>Momentos especiais de comunhão entre irmãs, fortalecendo laços de amizade e fé</p>
-  </div>
-  
-  <div class="card feature-card bloco-img" style="background-image: url('crescimento.jpeg');">
-    <div class="overlay"></div>
-    <h3>Crescimento</h3>
-    <p>Palestras e estudos bíblicos para fortalecer a fé e promover crescimento espiritual</p>
-  </div>
-  
-  <div class="card feature-card bloco-img" style="background-image: url('renovacao.jpeg');">
-    <div class="overlay"></div>
-    <h3>Renovação</h3>
-    <p>Um tempo de renovação espiritual, descanso e reconexão com Deus</p>
-  </div>
-</div>
+                <div class="card feature-card bloco-img" style="background-image: url('comunhao.jpeg');">
+                    <div class="overlay"></div>
+                    <h3>Comunhão</h3>
+                    <p>Momentos especiais de comunhão entre irmãs, fortalecendo laços de amizade e fé</p>
+                </div>
+                
+                <div class="card feature-card bloco-img" style="background-image: url('crescimento.jpeg');">
+                    <div class="overlay"></div>
+                    <h3>Crescimento</h3>
+                    <p>Palestras e estudos bíblicos para fortalecer a fé e promover crescimento espiritual</p>
+                </div>
+                
+                <div class="card feature-card bloco-img" style="background-image: url('renovacao.jpeg');">
+                    <div class="overlay"></div>
+                    <h3>Renovação</h3>
+                    <p>Um tempo de renovação espiritual, descanso e reconexão com Deus</p>
+                </div>
+            </div>
             
             <div class="highlight-section">
                 <div class="highlight-content">
