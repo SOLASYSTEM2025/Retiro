@@ -1,1157 +1,196 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Retiro das Irmãs 2026 - Inscrições Abertas</title>
     <meta name="description" content="Um tempo especial de comunhão e renovação espiritual. Faça sua inscrição para o Retiro das Irmãs 2026.">
-    
+
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Utility Classes */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 28px;
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 16px;
-            touch-action: manipulation;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #ec4899, #8b5cf6);
-            color: white;
-            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
-        }
-
-        .btn-primary:hover, .btn-primary:active {
-            background: linear-gradient(135deg, #db2777, #7c3aed);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: #ec4899;
-            border: 2px solid #ec4899;
-        }
-
-        .btn-outline:hover, .btn-outline:active {
-            background: #ec4899;
-            color: white;
-        }
-
-        .btn-lg {
-            padding: 18px 36px;
-            font-size: 18px;
-            border-radius: 16px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 10px 20px;
-            background: rgba(236, 72, 153, 0.1);
-            color: #ec4899;
-            border-radius: 25px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-
-        /* Header/Navigation */
-        .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(15px);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 16px 0;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 18px;
-            font-weight: 700;
-            color: #333;
-            text-decoration: none;
-        }
-
-        .logo i {
-            color: #ec4899;
-            font-size: 24px;
-        }
-
-        /* Desktop Navigation */
-        .nav-links {
-            display: none;
-            gap: 32px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #666;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            padding: 8px 0;
-        }
-
-        .nav-links a:hover {
-            color: #ec4899;
-        }
-
-        /* Mobile Menu Button */
-        .mobile-menu-btn {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            z-index: 1001;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-menu-btn span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background: #333;
-            border-radius: 3px;
-            transition: all 0.3s ease;
-            transform-origin: center;
-        }
-
-        .mobile-menu-btn span:not(:last-child) {
-            margin-bottom: 5px;
-        }
-
-        /* Menu aberto - animação do hamburger */
-        .mobile-menu-btn.active span:nth-child(1) {
-            transform: rotate(45deg) translate(6px, 6px);
-        }
-
-        .mobile-menu-btn.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .mobile-menu-btn.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(6px, -6px);
-        }
-
-        /* Mobile Menu Overlay */
-        .mobile-menu-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-menu-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Mobile Menu */
-        .mobile-menu {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 280px;
-            height: 100vh;
-            background: white;
-            z-index: 1000;
-            padding: 80px 0 40px;
-            transition: all 0.3s ease;
-            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .mobile-menu.active {
-            right: 0;
-        }
-
-        .mobile-menu-links {
-            list-style: none;
-            padding: 0;
-        }
-
-        .mobile-menu-links li {
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .mobile-menu-links a {
-            display: block;
-            padding: 20px 30px;
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 18px;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-menu-links a:hover, .mobile-menu-links a:active {
-            background: #fdf2f8;
-            color: #ec4899;
-            padding-left: 40px;
-        }
-
-        .mobile-menu-links i {
-            margin-right: 15px;
-            width: 20px;
-            color: #ec4899;
-        }
-
-        /* Hero Section - Mobile First */
-        .hero {
-            background: linear-gradient(135deg, #fdf2f8, #f3e8ff, #eff6ff);
-            padding: 100px 0 60px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-
-        /* Adicionando a imagem de fundo com transparência */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(236, 72, 153, 0.3), rgba(139, 92, 246, 0.3)), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/imageminicio-K34JgU3xlKSbGgBcrHxKGCXXDs6G8A.jpeg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.4; /* Ajuste a transparência aqui */
-            z-index: 1;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
-
-        .hero .gradient-text {
-            background: linear-gradient(135deg, #ec4899, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 32px;
-            line-height: 1.6;
-        }
-
-        .hero-badges {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 40px;
-        }
-
-        .hero-badge {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 12px 20px;
-            border-radius: 25px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            font-weight: 500;
-            width: fit-content;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            align-items: center;
-        }
-
-        .hero-actions .btn {
-            width: 100%;
-            max-width: 280px;
-        }
-
-        /* Sections - Mobile First */
-        .section {
-            padding: 60px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: #333;
-        }
-
-        .section-title p {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* About Section - Mobile First */
-        .about {
-            background: white;
-        }
-
-        .features-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            margin-bottom: 48px;
-        }
-
-        .feature-card {
-            padding: 32px 24px;
-            text-align: center;
-        }
-
-        .feature-icon {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 24px;
-        }
-
-        .feature-icon.pink {
-            background: rgba(236, 72, 153, 0.1);
-            color: #ec4899;
-        }
-
-        .feature-icon.purple {
-            background: rgba(139, 92, 246, 0.1);
-            color: #8b5cf6;
-        }
-
-        .feature-icon.blue {
-            background: rgba(59, 130, 246, 0.1);
-            color: #3b82f6;
-        }
-
-        .feature-card h3 {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .feature-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .highlight-section {
-            background: linear-gradient(135deg, #fdf2f8, #f3e8ff);
-            border-radius: 20px;
-            padding: 32px 24px;
-            text-align: center;
-        }
-
-        .highlight-content h3 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .highlight-content p {
-            color: #666;
-            margin-bottom: 24px;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .benefits-list {
-            list-style: none;
-            margin-bottom: 32px;
-        }
-
-        .benefits-list li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-            font-weight: 500;
-            text-align: left;
-        }
-
-        .benefits-list i {
-            color: #10b981;
-            font-size: 18px;
-            flex-shrink: 0;
-        }
-
-        .price-card {
-            background: white;
-            border-radius: 20px;
-            padding: 32px 24px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin-top: 24px;
-        }
-
-        .price {
-            font-size: 42px;
-            font-weight: 800;
-            color: #ec4899;
-            margin-bottom: 8px;
-        }
-
-        .price-label {
-            color: #666;
-            margin-bottom: 12px;
-            font-size: 16px;
-        }
-
-        .price-description {
-            font-size: 14px;
-            color: #999;
-        }
-
-        /* Schedule Section - Mobile First */
-        .schedule {
-            background: #f9fafb;
-        }
-
-        .schedule-list {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .schedule-item {
-            background: white;
-            border-radius: 16px;
-            padding: 24px;
-            text-align: center;
-        }
-
-        .schedule-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            margin: 0 auto 16px;
-        }
-
-        .schedule-header {
-            margin-bottom: 16px;
-        }
-
-        .schedule-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 8px;
-        }
-
-        .schedule-time {
-            background: rgba(236, 72, 153, 0.1);
-            color: #ec4899;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            display: inline-block;
-        }
-
-        .schedule-description {
-            color: #666;
-            line-height: 1.6;
-            font-size: 15px;
-        }
-
-        /* Registration Section - Mobile First */
-        .registration {
-            background: white;
-        }
-
-        .form-container {
-            max-width: 100%;
-        }
-
-        .demo-notice {
-            background: #fef3c7;
-            border: 1px solid #f59e0b;
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 24px;
-            text-align: center;
-        }
-
-        .demo-notice p {
-            color: #92400e;
-            font-weight: 500;
-            margin: 0;
-            font-size: 14px;
-        }
-
-        .form-card {
-            padding: 24px;
-        }
-
-        .form-title {
-            text-align: center;
-            margin-bottom: 24px;
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #333;
-            font-size: 15px;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 16px;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            -webkit-appearance: none;
-            appearance: none;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: #ec4899;
-            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 100px;
-            font-family: inherit;
-        }
-
-        .checkbox-group {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 24px;
-        }
-
-        .checkbox-group input[type="checkbox"] {
-            margin-top: 4px;
-            transform: scale(1.2);
-        }
-
-        .checkbox-group label {
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .payment-info {
-            background: linear-gradient(135deg, #dbeafe, #e0e7ff);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 24px;
-        }
-
-        .payment-title {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 18px;
-            font-weight: 600;
-            color: #1e40af;
-            margin-bottom: 20px;
-        }
-
-        .payment-methods {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .payment-method {
-            background: white;
-            padding: 16px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .payment-method i {
-            font-size: 24px;
-        }
-
-        .payment-method .pix {
-            color: #10b981;
-        }
-
-        .payment-method .card {
-            color: #3b82f6;
-        }
-
-        .payment-method-info h4 {
-            font-weight: 600;
-            margin-bottom: 4px;
-            font-size: 16px;
-        }
-
-        .payment-method-info p {
-            font-size: 14px;
-            color: #666;
-            margin: 0;
-        }
-
-        .security-note {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 16px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .security-note i {
-            color: #10b981;
-        }
-
-        /* WhatsApp Button Styles */
-        .whatsapp-contact {
-            margin-bottom: 24px;
-        }
-
-        .whatsapp-btn {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color: white;
-            padding: 20px;
-            border-radius: 16px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-        }
-
-        .whatsapp-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-            background: linear-gradient(135deg, #128C7E, #25D366);
-        }
-
-        .whatsapp-btn:active {
-            transform: translateY(0);
-        }
-
-        .whatsapp-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            flex-shrink: 0;
-        }
-
-        .whatsapp-info {
-            flex: 1;
-        }
-
-        .whatsapp-info h4 {
-            font-weight: 600;
-            margin-bottom: 4px;
-            font-size: 16px;
-            color: white;
-        }
-
-        .whatsapp-info p {
-            margin: 0;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .whatsapp-arrow {
-            font-size: 18px;
-            opacity: 0.8;
-            transition: transform 0.3s ease;
-        }
-
-        .whatsapp-btn:hover .whatsapp-arrow {
-            transform: translateX(5px);
-        }
-
-        /* Pulse animation for WhatsApp button */
-        @keyframes whatsapp-pulse {
-            0% {
-                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            }
-            50% {
-                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
-            }
-            100% {
-                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            }
-        }
-
-        .whatsapp-btn {
-            animation: whatsapp-pulse 2s infinite;
-        }
-
-        /* Mobile optimizations */
-        @media (max-width: 768px) {
-            .whatsapp-btn {
-                padding: 16px;
-                gap: 12px;
-            }
-            
-            .whatsapp-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 20px;
-            }
-            
-            .whatsapp-info h4 {
-                font-size: 15px;
-            }
-            
-            .whatsapp-info p {
-                font-size: 13px;
-            }
-        }
-
-        /* Touch feedback for mobile */
-        @media (hover: none) and (pointer: coarse) {
-            .whatsapp-btn:active {
-                transform: scale(0.98);
-                background: linear-gradient(135deg, #128C7E, #25D366);
-            }
-        }
-
-        /* Contact Section - Mobile First */
-        .contact {
-            background: #f9fafb;
-        }
-
-        .contact-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .contact-card {
-            padding: 24px;
-        }
-
-        .contact-card h3 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 24px;
-            color: #333;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            margin-bottom: 20px;
-        }
-
-        .contact-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            flex-shrink: 0;
-        }
-
-        .contact-info h4 {
-            font-weight: 600;
-            margin-bottom: 4px;
-            font-size: 16px;
-        }
-
-        .contact-info p {
-            color: #666;
-            margin: 0;
-            font-size: 15px;
-        }
-
-        .faq-item {
-            margin-bottom: 20px;
-        }
-
-        .faq-item h4 {
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #333;
-            font-size: 16px;
-        }
-
-        .faq-item p {
-            color: #666;
-            font-size: 14px;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        /* Footer - Mobile First */
-        .footer {
-            background: #1f2937;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
-        .footer-logo i {
-            color: #ec4899;
-            font-size: 28px;
-        }
-
-        .footer-logo span {
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        .footer p {
-            color: #9ca3af;
-            margin-bottom: 24px;
-            font-size: 16px;
-        }
-
-        .footer-divider {
-            border-top: 1px solid #374151;
-            padding-top: 20px;
-        }
-
-        .footer-divider p {
-            color: #6b7280;
-            font-size: 14px;
-            margin: 0;
-        }
-
-        /* Tablet Styles */
-        @media (min-width: 768px) {
-            .container {
-                padding: 0 24px;
-            }
-
-            .hero h1 {
-                font-size: 4rem;
-            }
-
-            .hero-badges {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero-actions {
-                flex-direction: row;
-                justify-content: center;
-            }
-
-            .hero-actions .btn {
-                width: auto;
-            }
-
-            .features-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 24px;
-            }
-
-            .schedule-item {
-                display: flex;
-                gap: 24px;
-                text-align: left;
-                align-items: flex-start;
-            }
-
-            .schedule-icon {
-                margin: 0;
-                flex-shrink: 0;
-            }
-
-            .schedule-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
-                flex-wrap: wrap;
-                gap: 12px;
-            }
-
-            .contact-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 32px;
-            }
-
-            .payment-methods {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 16px;
-            }
-        }
-
-        /* Desktop Styles */
-        @media (min-width: 1024px) {
-            .container {
-                padding: 0 32px;
-            }
-
-            .nav-links {
-                display: flex;
-            }
-
-            .mobile-menu-btn {
-                display: none;
-            }
-
-            .hero {
-                padding: 120px 0 80px;
-            }
-
-            .hero h1 {
-                font-size: 5rem;
-            }
-
-            .hero p {
-                font-size: 20px;
-            }
-
-            .section {
-                padding: 80px 0;
-            }
-
-            .section-title h2 {
-                font-size: 3rem;
-            }
-
-            .features-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 32px;
-            }
-
-            .highlight-section {
-                display: grid;
-                grid-template-columns: 1fr auto;
-                gap: 48px;
-                align-items: center;
-                text-align: left;
-                padding: 48px;
-            }
-
-            .price-card {
-                margin-top: 0;
-                min-width: 250px;
-            }
-
-            .form-container {
-                max-width: 600px;
-                margin: 0 auto;
-            }
-
-            .form-card {
-                padding: 40px;
-            }
-        }
-
-        /* Touch improvements */
-        @media (hover: none) and (pointer: coarse) {
-            .btn {
-                min-height: 48px;
-            }
-
-            .form-input {
-                min-height: 48px;
-            }
-
-            .mobile-menu-links a {
-                min-height: 60px;
-                display: flex;
-                align-items: center;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fadeInUp {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        /* Loading states */
-        .btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none !important;
-        }
-
-        /* Focus states for accessibility */
-        .btn:focus,
-        .form-input:focus,
-        .mobile-menu-btn:focus {
-            outline: 2px solid #ec4899;
-            outline-offset: 2px;
-        }
-
-        .bloco-img h3,.bloco-img p {
-            position: relative;
-            z-index: 2;
-            color: white !important;
-        }
-
-        .bloco-img {
-            background-size: cover;
-            background-position: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 24px;
-        }
-
-        .bloco-img .overlay {
-            position: absolute;
-            inset: 0;
-            background-color: rgba(0, 0, 0, 0.45);
-            z-index: 1;
-        }
-
-        .bloco-img h3,.bloco-img p {
-            position: relative;
-            z-index: 2;
-        }
+        /* === (MANTIDO: todo o CSS original que você forneceu) === */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; }
+        html { scroll-behavior: smooth; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; border: none; border-radius: 12px; font-weight: 600; text-decoration: none; cursor: pointer; transition: all 0.3s ease; font-size: 16px; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+        .btn-primary { background: linear-gradient(135deg, #ec4899, #8b5cf6); color: white; box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3); }
+        .btn-primary:hover, .btn-primary:active { background: linear-gradient(135deg, #db2777, #7c3aed); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4); }
+        .btn-outline { background: transparent; color: #ec4899; border: 2px solid #ec4899; }
+        .btn-outline:hover, .btn-outline:active { background: #ec4899; color: white; }
+        .btn-lg { padding: 18px 36px; font-size: 18px; border-radius: 16px; }
+        .card { background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); }
+        .badge { display: inline-flex; align-items: center; padding: 10px 20px; background: rgba(236, 72, 153, 0.1); color: #ec4899; border-radius: 25px; font-size: 14px; font-weight: 600; margin-bottom: 24px; }
+        .navbar { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(15px); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 16px 0; box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1); }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 700; color: #333; text-decoration: none; }
+        .logo i { color: #ec4899; font-size: 24px; }
+        .nav-links { display: none; gap: 32px; list-style: none; }
+        .nav-links a { color: #666; text-decoration: none; font-weight: 500; transition: color 0.3s ease; padding: 8px 0; }
+        .nav-links a:hover { color: #ec4899; }
+        .mobile-menu-btn { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 40px; height: 40px; background: none; border: none; cursor: pointer; padding: 0; z-index: 1001; transition: all 0.3s ease; }
+        .mobile-menu-btn span { display: block; width: 25px; height: 3px; background: #333; border-radius: 3px; transition: all 0.3s ease; transform-origin: center; }
+        .mobile-menu-btn span:not(:last-child) { margin-bottom: 5px; }
+        .mobile-menu-btn.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+        .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
+        .mobile-menu-btn.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+        .mobile-menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0,0,0,0.5); z-index: 999; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+        .mobile-menu-overlay.active { opacity: 1; visibility: visible; }
+        .mobile-menu { position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; background: white; z-index: 1000; padding: 80px 0 40px; transition: all 0.3s ease; box-shadow: -5px 0 20px rgba(0,0,0,0.1); }
+        .mobile-menu.active { right: 0; }
+        .mobile-menu-links { list-style: none; padding: 0; }
+        .mobile-menu-links li { border-bottom: 1px solid #f0f0f0; }
+        .mobile-menu-links a { display: block; padding: 20px 30px; color: #333; text-decoration: none; font-weight: 500; font-size: 18px; transition: all 0.3s ease; }
+        .mobile-menu-links a:hover, .mobile-menu-links a:active { background: #fdf2f8; color: #ec4899; padding-left: 40px; }
+        .mobile-menu-links i { margin-right: 15px; width: 20px; color: #ec4899; }
+        .hero { background: linear-gradient(135deg, #fdf2f8, #f3e8ff, #eff6ff); padding: 100px 0 60px; text-align: center; position: relative; overflow: hidden; min-height: 100vh; display: flex; align-items: center; }
+        .hero::before { content: ''; position: absolute; top:0; left:0; right:0; bottom:0; background: linear-gradient(135deg, rgba(236,72,153,0.3), rgba(139,92,246,0.3)), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/imageminicio-K34JgU3xlKSbGgBcrHxKGCXXDs6G8A.jpeg'); background-size: cover; background-position: center; opacity: 0.4; z-index: 1; }
+        .hero .container { position: relative; z-index: 2; }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; line-height: 1.1; }
+        .hero .gradient-text { background: linear-gradient(135deg, #ec4899, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: 18px; color: #666; margin-bottom: 32px; line-height: 1.6; }
+        .hero-badges { display:flex; flex-direction: column; align-items:center; gap:12px; margin-bottom:40px; }
+        .hero-badge { display:flex; align-items:center; gap:10px; background: rgba(255,255,255,0.9); padding:12px 20px; border-radius:25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); font-weight:500; width:fit-content; }
+        .hero-actions { display:flex; flex-direction:column; gap:16px; align-items:center; }
+        .hero-actions .btn { width:100%; max-width:280px; }
+        .section { padding:60px 0; }
+        .section-title { text-align:center; margin-bottom:48px; }
+        .section-title h2 { font-size:2.5rem; font-weight:700; margin-bottom:16px; color:#333; }
+        .section-title p { font-size:18px; color:#666; line-height:1.6; }
+        .about { background:white; }
+        .features-grid { display:flex; flex-direction:column; gap:24px; margin-bottom:48px; }
+        .feature-card { padding:32px 24px; text-align:center; }
+        .feature-icon { width:64px; height:64px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px; font-size:24px; }
+        .feature-icon.pink { background: rgba(236,72,153,0.1); color:#ec4899; }
+        .feature-icon.purple { background: rgba(139,92,246,0.1); color:#8b5cf6; }
+        .feature-icon.blue { background: rgba(59,130,246,0.1); color:#3b82f6; }
+        .feature-card h3 { font-size:22px; font-weight:600; margin-bottom:12px; }
+        .feature-card p { color:#666; line-height:1.6; }
+        .highlight-section { background: linear-gradient(135deg, #fdf2f8, #f3e8ff); border-radius:20px; padding:32px 24px; text-align:center; }
+        .highlight-content h3 { font-size:28px; font-weight:700; margin-bottom:20px; color:#333; }
+        .highlight-content p { color:#666; margin-bottom:24px; font-size:16px; line-height:1.6; }
+        .benefits-list { list-style:none; margin-bottom:32px; }
+        .benefits-list li { display:flex; align-items:center; gap:12px; margin-bottom:12px; font-weight:500; text-align:left; }
+        .benefits-list i { color:#10b981; font-size:18px; flex-shrink:0; }
+        .price-card { background:white; border-radius:20px; padding:32px 24px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.1); margin-top:24px; }
+        .price { font-size:42px; font-weight:800; color:#ec4899; margin-bottom:8px; }
+        .price-label { color:#666; margin-bottom:12px; font-size:16px; }
+        .price-description { font-size:14px; color:#999; }
+        .schedule { background:#f9fafb; }
+        .schedule-list { display:flex; flex-direction:column; gap:20px; }
+        .schedule-item { background:white; border-radius:16px; padding:24px; text-align:center; }
+        .schedule-icon { width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:20px; margin:0 auto 16px; }
+        .schedule-header { margin-bottom:16px; }
+        .schedule-title { font-size:20px; font-weight:600; color:#333; margin-bottom:8px; }
+        .schedule-time { background: rgba(236,72,153,0.1); color:#ec4899; padding:6px 16px; border-radius:20px; font-size:14px; font-weight:500; display:inline-block; }
+        .schedule-description { color:#666; line-height:1.6; font-size:15px; }
+        .registration { background:white; }
+        .form-container { max-width:100%; }
+        .demo-notice { background:#fef3c7; border:1px solid #f59e0b; border-radius:12px; padding:16px; margin-bottom:24px; text-align:center; }
+        .demo-notice p { color:#92400e; font-weight:500; margin:0; font-size:14px; }
+        .form-card { padding:24px; }
+        .form-title { text-align:center; margin-bottom:24px; font-size:24px; font-weight:600; }
+        .form-group { margin-bottom:20px; }
+        .form-label { display:block; font-weight:600; margin-bottom:8px; color:#333; font-size:15px; }
+        .form-input { width:100%; padding:16px; border:2px solid #e5e7eb; border-radius:12px; font-size:16px; transition: all 0.3s ease; -webkit-appearance: none; appearance: none; }
+        .form-input:focus { outline:none; border-color:#ec4899; box-shadow:0 0 0 3px rgba(236,72,153,0.1); }
+        .form-textarea { resize:vertical; min-height:100px; font-family:inherit; }
+        .checkbox-group { display:flex; align-items:flex-start; gap:12px; margin-bottom:24px; }
+        .checkbox-group input[type="checkbox"] { margin-top:4px; transform:scale(1.2); }
+        .checkbox-group label { font-size:14px; line-height:1.5; }
+        .payment-info { background: linear-gradient(135deg, #dbeafe, #e0e7ff); border-radius:16px; padding:24px; margin-bottom:24px; }
+        .payment-title { display:flex; align-items:center; gap:12px; font-size:18px; font-weight:600; color:#1e40af; margin-bottom:20px; }
+        .payment-methods { display:flex; flex-direction:column; gap:12px; }
+        .payment-method { background:white; padding:16px; border-radius:12px; display:flex; align-items:center; gap:16px; }
+        .payment-method i { font-size:24px; }
+        .payment-method .pix { color:#10b981; }
+        .payment-method .card { color:#3b82f6; }
+        .payment-method-info h4 { font-weight:600; margin-bottom:4px; font-size:16px; }
+        .payment-method-info p { font-size:14px; color:#666; margin:0; }
+        .security-note { display:flex; align-items:center; gap:8px; margin-top:16px; font-size:14px; color:#666; }
+        .security-note i { color:#10b981; }
+        .whatsapp-contact { margin-bottom:24px; }
+        .whatsapp-btn { display:flex; align-items:center; gap:16px; background: linear-gradient(135deg, #25D366, #128C7E); color:white; padding:20px; border-radius:16px; text-decoration:none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(37,211,102,0.3); position:relative; overflow:hidden; width:100%; }
+        .whatsapp-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37,211,102,0.4); background: linear-gradient(135deg, #128C7E, #25D366); }
+        .whatsapp-btn:active { transform: translateY(0); }
+        .whatsapp-icon { width:48px; height:48px; background: rgba(255,255,255,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:24px; flex-shrink:0; }
+        .whatsapp-info { flex:1; }
+        .whatsapp-info h4 { font-weight:600; margin-bottom:4px; font-size:16px; color:white; }
+        .whatsapp-info p { margin:0; font-size:14px; color: rgba(255,255,255,0.9); }
+        .whatsapp-arrow { font-size:18px; opacity:0.8; transition: transform 0.3s ease; }
+        .whatsapp-btn:hover .whatsapp-arrow { transform: translateX(5px); }
+        @keyframes whatsapp-pulse { 0% { box-shadow: 0 4px 15px rgba(37,211,102,0.3); } 50% { box-shadow: 0 4px 20px rgba(37,211,102,0.5); } 100% { box-shadow: 0 4px 15px rgba(37,211,102,0.3); } }
+        .whatsapp-btn { animation: whatsapp-pulse 2s infinite; }
+        @media (max-width:768px) { .whatsapp-btn { padding:16px; gap:12px; } .whatsapp-icon { width:40px; height:40px; font-size:20px; } .whatsapp-info h4 { font-size:15px; } .whatsapp-info p { font-size:13px; } }
+        @media (hover:none) and (pointer:coarse) { .whatsapp-btn:active { transform: scale(0.98); background: linear-gradient(135deg, #128C7E, #25D366); } }
+        .contact { background:#f9fafb; }
+        .contact-grid { display:flex; flex-direction:column; gap:24px; }
+        .contact-card { padding:24px; }
+        .contact-card h3 { font-size:24px; font-weight:600; margin-bottom:24px; color:#333; }
+        .contact-item { display:flex; align-items:flex-start; gap:16px; margin-bottom:20px; }
+        .contact-icon { width:48px; height:48px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+        .contact-info h4 { font-weight:600; margin-bottom:4px; font-size:16px; }
+        .contact-info p { color:#666; margin:0; font-size:15px; }
+        .faq-item { margin-bottom:20px; }
+        .faq-item h4 { font-weight:600; margin-bottom:8px; color:#333; font-size:16px; }
+        .faq-item p { color:#666; font-size:14px; line-height:1.6; margin:0; }
+        .footer { background:#1f2937; color:white; padding:40px 0; text-align:center; }
+        .footer-logo { display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:16px; }
+        .footer-logo i { color:#ec4899; font-size:28px; }
+        .footer-logo span { font-size:20px; font-weight:700; }
+        .footer p { color:#9ca3af; margin-bottom:24px; font-size:16px; }
+        .footer-divider { border-top:1px solid #374151; padding-top:20px; }
+        .footer-divider p { color:#6b7280; font-size:14px; margin:0; }
+        @media (min-width:768px) { .container { padding:0 24px; } .hero h1 { font-size:4rem; } .hero-badges { flex-direction:row; flex-wrap:wrap; justify-content:center; } .hero-actions { flex-direction:row; justify-content:center; } .hero-actions .btn { width:auto; } .features-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; } .schedule-item { display:flex; gap:24px; text-align:left; align-items:flex-start; } .schedule-icon { margin:0; flex-shrink:0; } .schedule-header { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; } .contact-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:32px; } .payment-methods { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; } }
+        @media (min-width:1024px) { .container { padding:0 32px; } .nav-links { display:flex; } .mobile-menu-btn { display:none; } .hero { padding:120px 0 80px; } .hero h1 { font-size:5rem; } .hero p { font-size:20px; } .section { padding:80px 0; } .section-title h2 { font-size:3rem; } .features-grid { grid-template-columns:repeat(3,1fr); gap:32px; } .highlight-section { display:grid; grid-template-columns:1fr auto; gap:48px; align-items:center; text-align:left; padding:48px; } .price-card { margin-top:0; min-width:250px; } .form-container { max-width:600px; margin:0 auto; } .form-card { padding:40px; } }
+        @media (hover:none) and (pointer:coarse) { .btn { min-height:48px; } .form-input { min-height:48px; } .mobile-menu-links a { min-height:60px; display:flex; align-items:center; } }
+        @keyframes fadeInUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } } .animate-fadeInUp { animation: fadeInUp 0.6s ease-out; }
+        .btn:disabled { opacity:0.6; cursor:not-allowed; transform:none !important; }
+        .btn:focus, .form-input:focus, .mobile-menu-btn:focus { outline:2px solid #ec4899; outline-offset:2px; }
+        .bloco-img h3,.bloco-img p { position:relative; z-index:2; color:white !important; }
+        .bloco-img { background-size:cover; background-position:center; color:white; position:relative; overflow:hidden; min-height:300px; display:flex; flex-direction:column; justify-content:center; padding:24px; }
+        .bloco-img .overlay { position:absolute; inset:0; background-color:rgba(0,0,0,0.45); z-index:1; }
+        .bloco-img h3,.bloco-img p { position:relative; z-index:2; }
+
+        /* === Estilos do pop-up/modal de pagamento (adicionados) === */
+        .mp-popup-overlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(0,0,0,0.5);
+          display: none;
+          align-items: center;
+          justify-content: center;
+          z-index: 2000;
+        }
+        .mp-popup {
+          width: 92%;
+          max-width: 520px;
+          background: #fff;
+          border-radius: 12px;
+          box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+          padding: 20px;
+          text-align: center;
+        }
+        .mp-popup h3 { margin-bottom: 8px; font-size: 20px; color:#333; }
+        .mp-popup p { color:#555; font-size: 14px; margin-bottom: 12px; }
+        .mp-qr { margin: 12px auto; max-width: 320px; }
+        .mp-qr img { width: 100%; max-width: 320px; border-radius: 8px; }
+        .mp-code { width: 100%; background: #f7f7f7; border-radius: 8px; padding: 12px; font-family: monospace; font-size: 13px; height: 86px; overflow:auto; }
+        .mp-actions { display:flex; gap:10px; justify-content:center; margin-top: 12px; flex-wrap:wrap; }
+        .mp-btn { padding: 10px 14px; border-radius: 10px; border: none; cursor: pointer; font-weight:600; }
+        .mp-btn-copy { background: #e6e6e6; color:#111; }
+        .mp-btn-card { background:#2563eb; color:white; }
+        .mp-status { margin-top: 12px; min-height: 36px; color:#0f172a; font-weight:600; }
+        .mp-close { position:absolute; right:12px; top:12px; background:transparent; border:none; font-size:18px; cursor:pointer; color:#666; }
     </style>
 </head>
-    <script src="/public/js/payment-client.js"></script>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -1292,7 +331,7 @@
                     </ul>
                 </div>
                 <div class="price-card">
-                    <div class="price">R$ 100</div>
+                    <div class="price">R$ 400</div>
                     <div class="price-label">Valor da inscrição</div>
                     <div class="price-description">Inclui hospedagem, alimentação e materiais</div>
                 </div>
@@ -1370,8 +409,8 @@
                 <div class="card form-card">
                     <h3 class="form-title">Formulário de Inscrição</h3>
                     
-                    <div class="demo-notice">
-                        <p>⚠️ <strong>Esta é apenas uma demonstração!</strong> O formulário não está funcional ainda.</p>
+                    <div class="demo-notice" id="demo-notice">
+                        <p>⚠️ <strong>Esta é apenas uma demonstração!</strong> Antes de usar em produção, configure as rotas /api no servidor e as credenciais do Mercado Pago.</p>
                     </div>
                     
                     <form id="inscricaoForm">
@@ -1423,19 +462,34 @@
                                 <span>Formas de Pagamento</span>
                             </div>
                             <div class="payment-methods">
+                                <!-- Agora com radios para seleção do método -->
                                 <div class="payment-method">
-                                    <i class="fas fa-mobile-alt pix"></i>
-                                    <div class="payment-method-info">
-                                        <h4>PIX</h4>
-                                        <p>Pagamento à vista</p>
-                                    </div>
+                                    <label style="display:flex; align-items:center; gap:12px; width:100%;">
+                                        <input type="radio" name="method" value="pix" checked>
+                                        <div style="flex:1;">
+                                            <div style="display:flex; align-items:center; gap:8px;">
+                                              <i class="fas fa-mobile-alt pix"></i>
+                                              <div class="payment-method-info">
+                                                  <h4>PIX</h4>
+                                                  <p>Pagamento à vista</p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </label>
                                 </div>
                                 <div class="payment-method">
-                                    <i class="fas fa-credit-card card"></i>
-                                    <div class="payment-method-info">
-                                        <h4>Cartão de Crédito</h4>
-                                        <p>Até 4x sem juros</p>
-                                    </div>
+                                    <label style="display:flex; align-items:center; gap:12px; width:100%;">
+                                        <input type="radio" name="method" value="card">
+                                        <div style="flex:1;">
+                                            <div style="display:flex; align-items:center; gap:8px;">
+                                              <i class="fas fa-credit-card card"></i>
+                                              <div class="payment-method-info">
+                                                  <h4>Cartão de Crédito</h4>
+                                                  <p>Até 4x sem juros</p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </label>
                                 </div>
                             </div>
                             <div class="security-note">
@@ -1444,7 +498,7 @@
                             </div>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                        <button type="submit" id="submitBtn" class="btn btn-primary btn-lg" style="width: 100%;">
                             Prosseguir para Pagamento
                             <i class="fas fa-heart" style="margin-left: 8px;"></i>
                         </button>
@@ -1536,175 +590,364 @@
         </div>
     </footer>
 
+    <!-- POP-UP / MODAL -->
+    <div id="mpPopupOverlay" class="mp-popup-overlay" role="dialog" aria-hidden="true">
+      <div class="mp-popup" role="document">
+        <button class="mp-close" id="mpCloseBtn" title="Fechar">&times;</button>
+        <h3 id="mpTitle">Pagamento</h3>
+        <p id="mpSubtitle">Aguarde enquanto geramos o QR Code — após o pagamento a inscrição será confirmada automaticamente.</p>
+
+        <div id="mpContent">
+          <!-- Conteúdo dinamicamente preenchido: QR, código, botão cartão -->
+          <div class="mp-qr" id="mpQrArea" style="display:none;"><img id="mpQrImg" src="" alt="QR Code PIX"/></div>
+          <textarea id="mpCodeArea" class="mp-code" readonly style="display:none;"></textarea>
+
+          <div class="mp-actions" id="mpActions" style="display:none;">
+            <button class="mp-btn mp-btn-copy" id="mpCopyBtn">Copiar código PIX</button>
+            <button class="mp-btn mp-btn-card" id="mpCardBtn">Pagar com Cartão</button>
+          </div>
+
+          <div id="mpStatus" class="mp-status">Aguardando pagamento...</div>
+        </div>
+      </div>
+    </div>
+
     <script>
-        // Mobile Menu Functions
-        function toggleMobileMenu() {
-            const menuBtn = document.querySelector('.mobile-menu-btn');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            
-            menuBtn.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            overlay.classList.toggle('active');
-            
-            // Prevent body scroll when menu is open
-            if (mobileMenu.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
+      // ---------- Utilidades ----------
+      const PRICE = 400.00; // valor fixo (R$ 400)
+      const CURRENCY = 'BRL';
+
+      // Retorna URL base para APIs (tenta rotas relativas; monta absolute se precisar)
+      function apiBase() {
+        // Se estiver em Vercel ou hospedado, rotas relativas funcionam.
+        return '';
+      }
+
+      // Tentativa flexível de chamada para endpoint create payment:
+      async function callCreatePayment(payload) {
+        // Tenta nomes comuns que usamos em exemplos: /api/create_payment, /api/create-payment
+        const candidates = [
+          (apiBase() || '') + '/api/create_payment',
+          (apiBase() || '') + '/api/create-payment',
+          (location.origin || '') + '/api/create_payment',
+          (location.origin || '') + '/api/create-payment'
+        ];
+
+        let lastError = null;
+        for (const url of candidates) {
+          try {
+            const res = await fetch(url, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+            const json = await res.json().catch(()=>null);
+            if (!res.ok) {
+              lastError = json || { error: 'Erro ' + res.status };
+              continue; // tenta próximo
+            }
+            return { url, data: json };
+          } catch (err) {
+            lastError = err;
+            continue;
+          }
+        }
+        throw lastError;
+      }
+
+      // Polling opcional para status do pagamento — endpoint opcional /api/payment-status?id=...
+      async function pollPaymentStatus(id, type='payment', onStatus) {
+        // tentativas até timeout
+        const maxAttempts = 60; // 60 * 5s = 5 minutos
+        let attempt = 0;
+        const intervalMs = 5000;
+        while (attempt < maxAttempts) {
+          try {
+            const candidates = [
+              `/api/payment-status?id=${encodeURIComponent(id)}`,
+              `/api/payment_status?id=${encodeURIComponent(id)}`,
+              `${location.origin}/api/payment-status?id=${encodeURIComponent(id)}`,
+              `${location.origin}/api/payment_status?id=${encodeURIComponent(id)}`
+            ];
+            for (const url of candidates) {
+              try {
+                const res = await fetch(url);
+                if (!res.ok) continue;
+                const json = await res.json();
+                if (json && (json.status === 'approved' || json.status === 'authorized' || json.status === 'paid')) {
+                  onStatus(json);
+                  return;
+                }
+              } catch(e) {
+                // ignore
+              }
+            }
+          } catch(e) {}
+          await new Promise(r => setTimeout(r, intervalMs));
+          attempt++;
+        }
+      }
+
+      // ---------- Modal controls ----------
+      const popupOverlay = document.getElementById('mpPopupOverlay');
+      const mpQrArea = document.getElementById('mpQrArea');
+      const mpQrImg = document.getElementById('mpQrImg');
+      const mpCodeArea = document.getElementById('mpCodeArea');
+      const mpActions = document.getElementById('mpActions');
+      const mpCopyBtn = document.getElementById('mpCopyBtn');
+      const mpCardBtn = document.getElementById('mpCardBtn');
+      const mpStatus = document.getElementById('mpStatus');
+      const mpCloseBtn = document.getElementById('mpCloseBtn');
+
+      function openPopup() {
+        popupOverlay.style.display = 'flex';
+        popupOverlay.setAttribute('aria-hidden', 'false');
+      }
+      function closePopup() {
+        popupOverlay.style.display = 'none';
+        popupOverlay.setAttribute('aria-hidden', 'true');
+      }
+
+      mpCloseBtn.addEventListener('click', () => closePopup());
+      popupOverlay.addEventListener('click', (e) => { if (e.target === popupOverlay) closePopup(); });
+
+      // ---------- Form handlers & payment flow ----------
+      const form = document.getElementById('inscricaoForm');
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // validações mínimas
+        if (!document.getElementById('termos').checked) {
+          alert('Você precisa aceitar os termos da inscrição.');
+          return;
+        }
+
+        const btn = document.getElementById('submitBtn');
+        const originalBtnText = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right:8px;"></i>Gerando pagamento...';
+
+        // coletar dados do formulário
+        const nome = document.getElementById('nome').value.trim();
+        const cpf = document.getElementById('cpf').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const telefone = document.getElementById('telefone').value.trim();
+        const igreja = document.getElementById('igreja').value.trim();
+        const restricoes = document.getElementById('restricoes').value.trim();
+        const responsavel = document.getElementById('responsavel').value.trim();
+        const method = document.querySelector('input[name="method"]:checked')?.value || 'pix';
+
+        const payload = {
+          nome, cpf, email, telefone, igreja, restricoes, responsavel, method,
+          amount: PRICE, currency: CURRENCY
+        };
+
+        try {
+          const result = await callCreatePayment(payload);
+          const data = result.data;
+
+          // Limpar e abrir popup
+          mpQrArea.style.display = 'none';
+          mpCodeArea.style.display = 'none';
+          mpActions.style.display = 'none';
+          mpStatus.innerText = 'Aguardando pagamento...';
+          openPopup();
+
+          // Tratar PIX
+          if (method === 'pix') {
+            // Pode vir em result.data.payment (SDK) ou direto com campos (adaptável)
+            const pay = data.payment || data; // fallback se endpoint retornar só payment
+            const poi = (pay && pay.point_of_interaction && pay.point_of_interaction.transaction_data) || (pay.transaction_data) || null;
+            const qrBase64 = poi && poi.qr_code_base64;
+            const qrString = poi && poi.qr_code;
+
+            if (qrBase64) {
+              mpQrImg.src = 'data:image/png;base64,' + qrBase64;
+              mpQrArea.style.display = 'block';
             } else {
-                document.body.style.overflow = '';
+              mpQrArea.style.display = 'none';
             }
-        }
 
-        function closeMobileMenu() {
-            const menuBtn = document.querySelector('.mobile-menu-btn');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const overlay = document.querySelector('.mobile-menu-overlay');
-            
-            menuBtn.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Close menu on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeMobileMenu();
+            if (qrString) {
+              mpCodeArea.value = qrString;
+              mpCodeArea.style.display = 'block';
+            } else {
+              mpCodeArea.style.display = 'none';
             }
-        });
 
-        // Formatação de CPF
-        document.getElementById('cpf').addEventListener('input', function(e) {
+            mpActions.style.display = 'flex';
+            // copiar
+            mpCopyBtn.onclick = async () => {
+              try {
+                await navigator.clipboard.writeText(mpCodeArea.value);
+                alert('Código PIX copiado!');
+              } catch (err) {
+                alert('Não foi possível copiar automaticamente, selecione e copie manualmente.');
+              }
+            };
+
+            // card button (se o backend retornar init_point também)
+            if (data.init_point) {
+              mpCardBtn.style.display = 'inline-block';
+              mpCardBtn.onclick = () => window.open(data.init_point, '_blank');
+            } else {
+              mpCardBtn.style.display = 'none';
+            }
+
+            // Tentar extrair payment id para polling de confirmação (se disponível)
+            const paymentId = (data.payment && (data.payment.id || data.payment.body && data.payment.body.id)) || (data.id) || null;
+            if (paymentId) {
+              // opcional: polling para um endpoint que seu backend pode prover (/api/payment-status?id=...)
+              pollPaymentStatus(paymentId, 'payment', (json) => {
+                mpStatus.innerText = '✅ Inscrição confirmada! Você receberá um e-mail com a confirmação.';
+                mpStatus.style.color = '#059669';
+              });
+            }
+
+          } else {
+            // Cartão: backend deve retornar init_point (Checkout Pro)
+            if (data.init_point) {
+              // mostrar botão Pagar com Cartão no popup
+              mpQrArea.style.display = 'none';
+              mpCodeArea.style.display = 'none';
+              mpActions.style.display = 'flex';
+              mpCardBtn.style.display = 'inline-block';
+              mpCardBtn.onclick = () => window.open(data.init_point, '_blank');
+
+              mpCopyBtn.style.display = 'none';
+              // Se o backend retornou preference_id, podemos tentar poll por preference (se implementar)
+              const prefId = data.preference_id || data.preferenceId || null;
+              if (prefId) {
+                // opcional polling por preferência (arquivo /api/payment-status?id=preference_123)
+                pollPaymentStatus(prefId, 'preference', (json) => {
+                  mpStatus.innerText = '✅ Inscrição confirmada! Você receberá um e-mail com a confirmação.';
+                  mpStatus.style.color = '#059669';
+                });
+              }
+            } else {
+              mpStatus.innerText = 'Erro: não foi possível gerar link para pagamento por cartão.';
+              mpStatus.style.color = '#dc2626';
+            }
+          }
+
+        } catch (err) {
+          console.error('Erro create payment:', err);
+          alert('Erro ao criar pagamento: ' + (err && err.error ? (err.error.message || JSON.stringify(err.error)) : (err && err.message ? err.message : 'erro desconhecido')));
+        } finally {
+          btn.disabled = false;
+          btn.innerHTML = originalBtnText;
+        }
+      });
+
+      // ---------- Máscaras e UX antigos (mantidos e ajustados) ----------
+      // Formatação de CPF
+      (function(){
+        const cpfEl = document.getElementById('cpf');
+        if (cpfEl) {
+          cpfEl.addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
             value = value.replace(/(\d{3})(\d)/, '$1.$2');
             value = value.replace(/(\d{3})(\d)/, '$1.$2');
             value = value.replace(/(\d{3})(\d{1,2})/, '$1-$2');
             value = value.replace(/(-\d{2})\d+?$/, '$1');
             e.target.value = value;
-        });
+          });
+        }
+      })();
 
-        // Formatação de telefone
-        document.getElementById('telefone').addEventListener('input', function(e) {
+      // Formatação de telefone
+      (function(){
+        const telEl = document.getElementById('telefone');
+        if (telEl) {
+          telEl.addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
             value = value.replace(/(\d{2})(\d)/, '($1) $2');
             value = value.replace(/(\d{5})(\d)/, '$1-$2');
             value = value.replace(/(-\d{4})\d+?$/, '$1');
             e.target.value = value;
-        });
-
-        // Submissão do formulário
-        document.getElementById('inscricaoForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Simular loading
-            const submitBtn = e.target.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i>Processando...';
-            
-            setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-                
-                alert('Esta é apenas uma demonstração! 📱\n\nO formulário não está funcional ainda, mas você pode ver como ficará a experiência mobile completa!\n\nEm breve você poderá fazer sua inscrição real com pagamento integrado! 🙏');
-            }, 2000);
-        });
-
-        // Navegação suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    // Close mobile menu if open
-                    closeMobileMenu();
-                    
-                    // Smooth scroll to target
-                    setTimeout(() => {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }, 300);
-                }
-            });
-        });
-
-        // Animações ao scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -30px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Aplicar animações aos elementos
-        document.addEventListener('DOMContentLoaded', function() {
-            const animatedElements = document.querySelectorAll('.card, .schedule-item, .hero-badge');
-            animatedElements.forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(20px)';
-                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(element);
-            });
-
-            // Animate hero elements
-            const heroElements = document.querySelectorAll('.hero h1, .hero p, .hero-actions');
-            heroElements.forEach((element, index) => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(30px)';
-                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                
-                setTimeout(() => {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
-                }, index * 200);
-            });
-        });
-
-        // Touch feedback for buttons
-        document.querySelectorAll('.btn').forEach(btn => {
-            btn.addEventListener('touchstart', function() {
-                this.style.transform = 'scale(0.98)';
-            });
-            
-            btn.addEventListener('touchend', function() {
-                this.style.transform = '';
-            });
-        });
-
-        // Improve form experience on mobile
-        const formInputs = document.querySelectorAll('.form-input');
-        formInputs.forEach(input => {
-            input.addEventListener('focus', function() {
-                this.parentElement.style.transform = 'scale(1.02)';
-                this.parentElement.style.transition = 'transform 0.2s ease';
-            });
-            
-            input.addEventListener('blur', function() {
-                this.parentElement.style.transform = '';
-            });
-        });
-
-        // Add haptic feedback simulation for mobile
-        function vibrate() {
-            if (navigator.vibrate) {
-                navigator.vibrate(50);
-            }
+          });
         }
+      })();
 
-        // Add vibration to button clicks on mobile
-        document.querySelectorAll('.btn, .mobile-menu-btn').forEach(btn => {
-            btn.addEventListener('click', vibrate);
+      // Navegação suave (mantido)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                // Close mobile menu if open
+                if (typeof closeMobileMenu === 'function') closeMobileMenu();
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 300);
+            }
         });
+      });
+
+      // Mobile menu functions (mantidos)
+      function toggleMobileMenu() {
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const overlay = document.querySelector('.mobile-menu-overlay');
+        menuBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        if (mobileMenu.classList.contains('active')) document.body.style.overflow = 'hidden'; else document.body.style.overflow = '';
+      }
+      function closeMobileMenu() {
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const overlay = document.querySelector('.mobile-menu-overlay');
+        menuBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMobileMenu(); });
+
+      // Animações ao scroll (mantido)
+      const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -30px 0px' };
+      const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.style.opacity = '1';
+                  entry.target.style.transform = 'translateY(0)';
+              }
+          });
+      }, observerOptions);
+      document.addEventListener('DOMContentLoaded', function() {
+          const animatedElements = document.querySelectorAll('.card, .schedule-item, .hero-badge');
+          animatedElements.forEach(element => {
+              element.style.opacity = '0';
+              element.style.transform = 'translateY(20px)';
+              element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+              observer.observe(element);
+          });
+          const heroElements = document.querySelectorAll('.hero h1, .hero p, .hero-actions');
+          heroElements.forEach((element, index) => {
+              element.style.opacity = '0';
+              element.style.transform = 'translateY(30px)';
+              element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+              setTimeout(() => { element.style.opacity = '1'; element.style.transform = 'translateY(0)'; }, index * 200);
+          });
+      });
+
+      // Touch feedback for buttons
+      document.querySelectorAll('.btn').forEach(btn => {
+          btn.addEventListener('touchstart', function() { this.style.transform = 'scale(0.98)'; });
+          btn.addEventListener('touchend', function() { this.style.transform = ''; });
+      });
+
+      // Improve form experience on mobile
+      const formInputs = document.querySelectorAll('.form-input');
+      formInputs.forEach(input => {
+          input.addEventListener('focus', function() { this.parentElement.style.transform = 'scale(1.02)'; this.parentElement.style.transition = 'transform 0.2s ease'; });
+          input.addEventListener('blur', function() { this.parentElement.style.transform = ''; });
+      });
+
+      // Haptic feedback simulation
+      function vibrate() { if (navigator.vibrate) navigator.vibrate(50); }
+      document.querySelectorAll('.btn, .mobile-menu-btn').forEach(btn => btn.addEventListener('click', vibrate));
     </script>
 </body>
 </html>
