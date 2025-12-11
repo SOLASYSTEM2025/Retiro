@@ -258,6 +258,25 @@
                 <div class="hero-badge">
                     <i class="fas fa-map-marker-alt" style="color: #8b5cf6;"></i>
                     <span>Chácara Prados Verdejantes- Pradópolis/SP</span>
+                    <button 
+  onclick="handleDirections()"
+  class="botao-ver-direcoes"
+  style="
+    background: linear-gradient(to right, #db2777, #ec4899);
+    color: white;
+    padding: 16px 32px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto;
+  "
+>
+  📍 Ver Direções no Maps
+</button>
                 </div>
                 <div class="hero-badge">
                     <i class="fas fa-users" style="color: #3b82f6;"></i>
@@ -273,6 +292,24 @@
                 <a href="#evento" class="btn btn-outline btn-lg">
                     Saiba Mais
                 </a>
+                <button 
+  onclick="handleDirections()"
+  class="botao-como-chegar"
+  style="
+    background: white;
+    border: 2px solid #9333ea;
+    color: #7e22ce;
+    padding: 12px 32px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  "
+>
+  📍 Como Chegar
+</button>
             </div>
         </div>
     </section>
@@ -955,5 +992,14 @@
       function vibrate() { if (navigator.vibrate) navigator.vibrate(50); }
       document.querySelectorAll('.btn, .mobile-menu-btn').forEach(btn => btn.addEventListener('click', vibrate));
     </script>
+    <script>
+  function handleDirections() {
+    const address = encodeURIComponent(
+      "Chácara Prados Verdejantes, R. Sete de Setembro, 332 - Centro, Pradópolis - SP, 14850-000"
+    );
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${address}`;
+    window.open(url, "_blank");
+  }
+</script>
 </body>
 </html>
